@@ -1,0 +1,12 @@
+/turtlesim:
+  ros__parameters:
+    background_b: 0
+    background_g: 165
+    background_r: 255
+    holonomic: false
+    qos_overrides./parameter_events.publisher.depth: 1000
+    qos_overrides./parameter_events.publisher.durability: transient_local
+    qos_overrides./parameter_events.publisher.history: keep_last
+    qos_overrides./parameter_events.publisher.reliability: reliable
+    start_type_description_service: true
+    use_sim_time: false

@@ -1,0 +1,33 @@
+Docker run flags - Berke Kandemir s162235
+
+-it
+That flag makes the container interactive for users consequently we can type commands inside of it.
+If i didn't have this flag in the ubuntu, the container would run and close immediately.
+
+--privileged
+Basically it gives the container access to the computer's hardware.
+That's why it is needed in robotics to control physical devices and sensors.
+
+--network=host
+The container uses the same internet connection as our computer.
+As a result of that, the container and host share the same network.
+
+--volume
+It directs a folder from our computer to a folder inside the container.
+We can share and access files between both systems by using this way.
+
+--gpus all
+It gives permission to the container to use the computer's graphics card, which is shortly called GPU.
+It is convenient especially for machine learning or applications using heavy graphical attributes.
+
+--rm
+It automatically deletes the container after stopping it.
+In addition, it keeps our system clean without manually removing containers.
+
+--cpu-shares
+It is in charge of controlling how much of the CPU the container is allowed to use.
+It is really practical when we run multiple containers at the same time.
+
+--name
+It assigns a name to the container from our name choices instead of random ones.
+It makes it straightforward to find and manage our container.

@@ -1,0 +1,56 @@
+ROS 2 Gazebo Sensor Topics - Laboratory 2
+
+1. AIR PRESSURE SENSOR
+   Launch file : air_pressure.launch.py
+   Topic       : /air_pressure
+   Message type: sensor_msgs/msg/FluidPressure
+   Frequency   : ~20 Hz
+   Description : This sensor publishes atmospheric pressure data.
+                 I measured it at around 20 Hz using ros2 topic hz.
+
+2. IMU (Inertial Measurement Unit)
+   Launch file : imu.launch.py
+   Topic       : /imu
+   Message type: sensor_msgs/msg/Imu
+   Frequency   : ~70 Hz
+   Description : The IMU sensor publishes linear acceleration, angular
+                 velocity and orientation data. It was the fastest sensor
+                 I tested, running at around 70 Hz.
+
+3. RGBD CAMERA - Image
+   Launch file : rgbd_camera_bridge.launch.py
+   Topic       : /rgbd_camera/image
+   Message type: sensor_msgs/msg/Image
+   Frequency   : ~9 Hz
+   Description : This topic publishes the color image stream from the
+                 RGBD camera. When I added a red box and a traffic cone
+                 to the simulation, both objects appeared clearly in the
+                 color image.
+
+4. RGBD CAMERA - Depth Image
+   Launch file : rgbd_camera_bridge.launch.py
+   Topic       : /rgbd_camera/depth_image
+   Message type: sensor_msgs/msg/Image
+   Frequency   : ~9 Hz
+   Description : This topic publishes the depth image from the RGBD camera.
+                 The objects we added to the scene also showed up in the
+                 depth image with different distance values, which confirms
+                 the sensor correctly responds to changes in the environment.
+
+5. GPU LIDAR
+   Launch file : gpu_lidar_bridge.launch.py
+   Topic       : /lidar/points
+   Message type: sensor_msgs/msg/PointCloud2
+   Frequency   : ~7.5 Hz
+   Description : The GPU-accelerated LiDAR sensor publishes 3D point cloud
+                 data. The objects added to the simulation were visible in
+                 the point cloud as well.
+
+6. DEPTH CAMERA
+   Launch file : depth_camera.launch.py
+   Topic       : /depth_camera
+   Message type: sensor_msgs/msg/Image
+   Frequency   : ~10 Hz
+   Description : This sensor publishes depth image data from a standalone
+                 depth camera. I confirmed the topic was active using
+                 ros2 topic info (Publisher count: 1).

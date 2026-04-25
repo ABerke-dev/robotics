@@ -1,0 +1,7 @@
+
+C++ package uses CMakeLists.txt for build configuration and requires compilation before execution, 
+making it suitable for performance-critical and real-time robotics applications such as robot control systems 
+and sensor drivers. Python package uses setup.py and setup.cfg instead of CMakeLists.txt and does not 
+require compilation, allowing faster development and easier prototyping. Therefore, C++ is preferred for high-performance 
+tasks requiring low latency, while Python is better suited for data processing, machine learning integration, 
+and rapid algorithm development.
