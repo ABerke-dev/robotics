@@ -1,4 +1,5 @@
 ROS 2 Gazebo Sensor Topics - Laboratory 2
+==========================================
 
 1. AIR PRESSURE SENSOR
    Launch file : air_pressure.launch.py
@@ -6,7 +7,7 @@ ROS 2 Gazebo Sensor Topics - Laboratory 2
    Message type: sensor_msgs/msg/FluidPressure
    Frequency   : ~20 Hz
    Description : This sensor publishes atmospheric pressure data.
-                 I measured it at around 20 Hz using ros2 topic hz.
+                 We measured it at around 20 Hz using ros2 topic hz.
 
 2. IMU (Inertial Measurement Unit)
    Launch file : imu.launch.py
@@ -15,7 +16,7 @@ ROS 2 Gazebo Sensor Topics - Laboratory 2
    Frequency   : ~70 Hz
    Description : The IMU sensor publishes linear acceleration, angular
                  velocity and orientation data. It was the fastest sensor
-                 I tested, running at around 70 Hz.
+                 we tested, running at around 70 Hz.
 
 3. RGBD CAMERA - Image
    Launch file : rgbd_camera_bridge.launch.py
@@ -23,7 +24,7 @@ ROS 2 Gazebo Sensor Topics - Laboratory 2
    Message type: sensor_msgs/msg/Image
    Frequency   : ~9 Hz
    Description : This topic publishes the color image stream from the
-                 RGBD camera. When I added a red box and a traffic cone
+                 RGBD camera. When we added a red box and a traffic cone
                  to the simulation, both objects appeared clearly in the
                  color image.
 
@@ -52,5 +53,5 @@ ROS 2 Gazebo Sensor Topics - Laboratory 2
    Message type: sensor_msgs/msg/Image
    Frequency   : ~10 Hz
    Description : This sensor publishes depth image data from a standalone
-                 depth camera. I confirmed the topic was active using
+                 depth camera. We confirmed the topic was active using
                  ros2 topic info (Publisher count: 1).
