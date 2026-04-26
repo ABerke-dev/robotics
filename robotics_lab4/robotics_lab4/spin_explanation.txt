@@ -1,0 +1,17 @@
+What does rclpy.spin(node) do?
+
+When I commented out rclpy.spin(node) and ran the node again,
+I noticed that the node printed the log message and immediately
+closed itself. The terminal prompt came back right away.
+
+When spin() is active, the node keeps running and waits for
+something to happen (like receiving a message). It basically
+tells ROS to "keep this node alive and keep checking for events".
+
+Without spin(), the node just runs the code once from top to
+bottom and exits. This means it can never receive any messages
+or respond to anything because it closes before anything can
+happen.
+
+So spin() is like a loop that keeps the node alive. Without it,
+the node is basically useless for any real communication task.
